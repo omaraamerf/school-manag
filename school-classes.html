@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>الفصول والمواد | النظام المدرسي</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="School Management Frontend" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <link rel="stylesheet" href="assets/css/preloader-rtl.min.css" type="text/css" />
+        <link href="assets/css/bootstrap-rtl.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons-rtl.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+       <div class="page-title-box d-flex align-items-center justify-content-between">
+  <h4 class="mb-0">الفصول</h4>
+  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#classModal">إضافة فصل</button>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped align-middle">
+    <thead>
+      <tr>
+        <th>الفصل</th>
+        <th>الشعبة</th>
+        <th>المرحلة</th>
+        <th>عدد الطلاب</th>
+        <th class="text-end">إجراءات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>الأول</td>
+        <td>A</td>
+        <td>ابتدائي</td>
+        <td>32</td>
+        <td class="text-end">
+          <button class="btn btn-sm btn-soft-primary" type="button" data-bs-toggle="modal" data-bs-target="#classModal">تعديل</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+        <div class="modal fade" id="addClassModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">إضافة فصل</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label">اسم الفصل</label>
+                                <input type="text" class="form-control" placeholder="مثال: الأول (أ)">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">المرحلة</label>
+                                <select class="form-select">
+                                    <option selected>اختر...</option>
+                                    <option>ابتدائي</option>
+                                    <option>متوسط</option>
+                                    <option>ثانوي</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">ملاحظات</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-primary">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addSubjectModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">إضافة مادة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">اسم المادة</label>
+                                <input type="text" class="form-control" placeholder="مثال: رياضيات">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">الفصل</label>
+                                <select class="form-select">
+                                    <option selected>اختر...</option>
+                                    <option>الأول (أ)</option>
+                                    <option>الثاني (أ)</option>
+                                    <option>الثالث (ب)</option>
+                                    <option>الخامس (ج)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">المعلم</label>
+                                <select class="form-select">
+                                    <option selected>اختر...</option>
+                                    <option>أ. أحمد صالح</option>
+                                    <option>أ. رانيا حسن</option>
+                                    <option>أ. خالد يوسف</option>
+                                    <option>أ. سارة علي</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">الحصص/أسبوع</label>
+                                <input type="number" class="form-control" value="4">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">ملاحظات</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-primary">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightbar-overlay"></div>
+
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="assets/libs/pace-js/pace.min.js"></script>
+        <script>localStorage.setItem("minia-language","ar");</script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
