@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>المعلمون | النظام المدرسي</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="School Management Frontend" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <link rel="stylesheet" href="assets/css/preloader-rtl.min.css" type="text/css" />
+        <link href="assets/css/bootstrap-rtl.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons-rtl.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div class="page-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+          <h4 class="mb-0">المعلمين</h4>
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#teacherModal">
+            إضافة معلم
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="row g-2">
+          <div class="col-md-6">
+            <input class="form-control" type="text" placeholder="بحث بالاسم / الاختصاص / الهاتف">
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>كل الاختصاصات</option>
+              <option>رياضيات</option>
+              <option>فيزياء</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>كل الحالات</option>
+              <option>نشط</option>
+              <option>متوقف</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+          <table class="table table-striped align-middle mb-0">
+            <thead>
+              <tr>
+                <th>رقم</th>
+                <th>الاسم</th>
+                <th>الاختصاص</th>
+                <th>الهاتف</th>
+                <th>الحالة</th>
+                <th class="text-end">إجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>محمد أحمد</td>
+                <td>رياضيات</td>
+                <td>09xxxxxxxx</td>
+                <td><span class="badge bg-success">نشط</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-soft-primary" type="button" data-bs-toggle="modal" data-bs-target="#teacherModal">تعديل</button>
+                  <button class="btn btn-sm btn-soft-danger" type="button">حذف</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="modal fade" id="teacherModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">إضافة/تعديل معلم</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-2">
+          <div class="col-12">
+            <label class="form-label">الاسم</label>
+            <input class="form-control" type="text">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">الاختصاص</label>
+            <input class="form-control" type="text" placeholder="مثال: رياضيات">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">الهاتف</label>
+            <input class="form-control" type="text">
+          </div>
+          <div class="col-12">
+            <label class="form-label">الحالة</label>
+            <select class="form-select">
+              <option>نشط</option>
+              <option>متوقف</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+        <button type="button" class="btn btn-primary">حفظ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="rightbar-overlay"></div>
+
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="assets/libs/pace-js/pace.min.js"></script>
+        <script>localStorage.setItem("minia-language","ar");</script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
