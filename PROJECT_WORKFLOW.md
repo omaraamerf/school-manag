@@ -87,9 +87,4 @@
 - `docs: ...` توثيق
 - `chore: ...` تنظيف/ترتيب
 
-## 10) محاكاة “إدارة مشروع” داخل GitHub (كيف تُظهرونها للمقرر)
-1. أنشئ Issues لكل ميزة (مع Acceptance Criteria).
-2. ضع Issues داخل Milestones.
-3. حرّكها في Project Board حسب تقدم الفريق.
-4. اربط كل PR بـ Issue وأظهر الـ Review والتعليقات.
-5. اعمل Release Tags بسيطة: `v0.1`, `v0.2` (حتى لو Front فقط).
+
